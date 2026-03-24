@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predictive Maintenance Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<!-- TOP NAVBAR -->
+<div class="sidebar">
+    <h2 class="nav-title">
+        Acoustic-Based Fault Detection using CNN on Spectrograms
+    </h2>
+
+    <ul>
+        <li>Status</li>
+        <li>Signals</li>
+        <li>Predictions</li>
+        <li>Logs</li>
+    </ul>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main">
+
+    <h1>Machine Monitoring Dashboard</h1>
+    <p>Real-time acoustic analysis using CNN model</p>
+
+    <!-- GRID START -->
+    <div class="grid">
+
+        <!-- ALERT (FULL WIDTH) -->
+        <div class="card alert">
+            <h2>Alerts</h2>
+            <div class="alert-box">
+                Bearing fault detected – inspect immediately
+            </div>
+        </div>
+
+        <!-- ROW 1 -->
+        <div class="card">
+            <h2>Machine Status</h2>
+            <div class="value green">Normal</div>
+            <small>System running normally</small>
+        </div>
+
+        <div class="card">
+            <h2>CNN Model Output</h2>
+            <div class="value blue">Bearing Fault</div>
+            <small>Confidence: 91%</small>
+        </div>
+
+        <!-- ROW 2 -->
+        <div class="card">
+            <h2>Remaining Useful Life</h2>
+            <div class="value">42 hrs</div>
+            <small>Estimated based on degradation</small>
+        </div>
+
+        <div class="card spectrogram">
+            <h2>Spectrogram</h2>
+            <img src="spectrogram.png">
+        </div>
+
+        <!-- ROW 3 -->
+        <div class="card">
+            <h2>Acoustic Waveform</h2>
+            <canvas id="waveChart"></canvas>
+        </div>
+
+        <div class="card">
+            <h2>Fault Trend</h2>
+            <canvas id="trendChart"></canvas>
+        </div>
+
+    </div>
+    <!-- GRID END -->
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
